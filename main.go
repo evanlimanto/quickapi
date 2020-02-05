@@ -1,12 +1,11 @@
 package main
 
 import (
-	"github.com/evanlimanto/quickapi/app"
+	"github.com/evanlimanto/quickapi/src/api"
 )
 
 func main() {
-	app := &app.App{}
-	app.Initialize()
-	app.initializeRoutes()
+	app := &api.App{}
+	app.Initialize("username", "password", "dbname")
 	app.Run()
 }
